@@ -1,17 +1,17 @@
 import { query, type SDKMessage } from "@anthropic-ai/claude-code";
 
-const messages: SDKMessage[] = [];
+const haikuMessages: SDKMessage[] = [];
 
-for await (const message of query({
+for await (const responseMessage of query({
   prompt: "Write a haiku about foo.py",
   abortController: new AbortController(),
   options: {
     maxTurns: 3,
   },
 })) {
-  messages.push(message);
+  haikuMessages.push(responseMessage);
 }
 
-console.log(messages);
+console.log(haikuMessages);
 
 // console.log("hello haiku");

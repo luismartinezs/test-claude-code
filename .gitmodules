@@ -1,0 +1,3 @@
+[submodule ".claude_2"]
+	path = .claude_2
+	url = https://github.com/al3rez/ooda-subagents.git
